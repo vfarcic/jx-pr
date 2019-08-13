@@ -1,0 +1,51 @@
+Step: step-credential-initializer-tt8b4:
+
+{"level":"warn","ts":1565721906.9425104,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565721906.9441805,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-jnzxs:
+
+{"level":"warn","ts":1565721907.2564163,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565721907.2579193,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-*******-jx-pr-pr-1-serverl-qqcfk:
+
+{"level":"warn","ts":1565721913.3799787,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565721913.703289,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*******/jx-pr.git @ cca86a41a1c74771460270ab906f04854844ce8a in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:cca86a41a1c74771460270ab906f04854844ce8a,1:faea7bd1d40dc05f76ad13ff6f89c8fb16be4b88","time":"2019-08-13T18:45:14Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin faea7bd1d40dc05f76ad13ff6f89c8fb16be4b88: cca86a41a1c74771460270ab906f04854844ce8a: in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran git reset --hard cca86a41a1c74771460270ab906f04854844ce8a in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran git merge faea7bd1d40dc05f76ad13ff6f89c8fb16be4b88 in ","time":"2019-08-13T18:45:15Z"}
+MERGED SHA SUBJECT
+faea7bd1d  This is a PR
+523f28973  This is a PR
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin faea7bd1d40dc05f76ad13ff6f89c8fb16be4b88: cca86a41a1c74771460270ab906f04854844ce8a: in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran git reset --hard cca86a41a1c74771460270ab906f04854844ce8a in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T18:45:15Z"}
+{"level":"debug","msg":"ran git merge faea7bd1d40dc05f76ad13ff6f89c8fb16be4b88 in ","time":"2019-08-13T18:45:15Z"}
+MERGED SHA SUBJECT
+faea7bd1d  This is a PR
+523f28973  This is a PR
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T18:45:16Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T18:45:16Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-serverless-jenkins-effective.yml","time":"2019-08-13T18:45:17Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for *******-jx-pr-PR-1-1","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"upserted PipelineResource *******-jx-pr-pr-1-serverless-j for the git repository https://github.com/*******/jx-pr.git and branch PR-1","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"upserted Task *******-jx-pr-pr-1-serverless-j-from-build-pack-1","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"upserted Pipeline *******-jx-pr-pr-1-serverless-j-1","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"created PipelineRun *******-jx-pr-pr-1-serverless-j-1","time":"2019-08-13T18:45:19Z"}
+{"level":"info","msg":"created PipelineStructure *******-jx-pr-pr-1-serverless-j-1","time":"2019-08-13T18:45:19Z"}
